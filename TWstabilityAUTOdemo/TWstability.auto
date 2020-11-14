@@ -1,0 +1,81 @@
+#======================
+# AUTO demo TWstability
+#======================
+#
+# Essential spectrum and stability boundary in parameter space of
+# large-wavelength travelling waves in a cyclic competition model with
+# one spatial dimension.  
+
+print "\nStep 1: Continuation of co-existence steady-state solution --- detecting Hopf bifurcation"
+r1 = run('TWstability',c='TWstability', ICP=['gam'])
+
+print "\nStep 2: Continuation of periodic orbits --- selecting period 20"
+r2 = run(r1('HB1'), ICP=['gam','Period'], IPS=2, 
+         NMX=500, NPR=100, NTST=200, ILP=1, ISP=1,
+	 UZR={'Period': 20})
+
+print "\nStep 3: Continuation of extended system --- growing the norm of the eigenfunction associated with the trivial eigenvalue 1"
+r3 = run(r2('UZ1'), ICP=['h','mu','L'], PAR={'L': 20.0}, IPS = 4,
+         NDIM=18, NBC=18, NINT=2,
+         ISP=0, ISW=-1, NMX=5, NPR=1, DS=0.5, DSMAX=1, 
+	 UZSTOP={'h':1.0})
+
+print "\nStep 4: Continuation of the eigenvalue problem --- detecting the first point on the stability boundary"
+print "\nRun 4a: Set up extended system (a correction step)"
+r4a = run(r3('UZ1'), ICP=['lampp','L','gam','Rlam','Ilam','lamp'],
+          NDIM=30, NBC=30, NINT=5,
+          ISW=1, NMX=2, NPR=1, DS=0.005, DSMAX=0.01,
+          THU={19:0,20:0,21:0,22:0,23:0,24:0,25:0,26:0,27:0,28:0,29:0,30:0})
+print "\nRun 4b: Detecting a zero for the second derivative of lambda wrt to nu=i*phi"
+r4b = run(r4a, NMX=1500, NPR=500, DS='-', UZSTOP={'lampp':0.0})
+
+print "\nStep 5: Continuing the Eckhaus stability boundary"
+print "\nRun 5a: In the direction of increasing zeta"
+r5a=run(r4b('UZ1'), ICP=['zeta','L','gam','Rlam','Ilam','lamp'],
+        NMX=100000, NPR=10000, EPSL=1e-05, EPSU=1e-05, EPSS=1e-04,
+	THL={'L':0.0,'Rlam':0.0,'Ilam':0.0},
+	UZSTOP={'L':100.0})
+print "\nRun 5b: In the direction of decreasing zeta"
+r5b=run(r4b('UZ1'), ICP=['zeta','L','gam','Rlam','Ilam','lamp'],
+        DS='-', NMX=100000, NPR=10000, EPSL=1e-05, EPSU=1e-05, EPSS=1e-04,
+	THL={'L':0.0,'Rlam':0.0,'Ilam':0.0},
+	UZSTOP={'L':100.0})
+
+print "\nMerging the two branches from Step 5 into one branch"
+EckCurve=rl(merge(r5a+r5b))
+save(EckCurve,'TWEck')
+p1=plot('TWEck',type="bifurcation",
+       bifurcation_x=["zeta"], bifurcation_y=["L"], 
+       minx=0,maxx=2,miny=15,maxy=100,
+       color_list="orange",
+       xlabel="$\zeta$",ylabel="$L$")
+
+wait()
+
+p1.savefig("TWEck.eps")
+
+
+########################
+print "\nAlternative step: Continuation of the essential spectrum for zeta = 1"
+r0a=run(r3('UZ1'), ICP=['Rlam','Ilam','phi','gam'],
+        NINT=3, ISW=1, NMX=10000, NPR=1000, DS=0.005, DSMAX=0.01,
+	UZSTOP={'Rlam':-0.5})
+print "\nand the opposite direction"
+r0b=run(r3('UZ1'), ICP=['Rlam','Ilam','phi','gam'],
+        NINT=3, ISW=1, NMX=10000, NPR=1000, DS=-0.005, DSMAX=0.01,
+	UZSTOP={'Rlam':-0.5})
+print "\nMerging the two branches of the essential spectrum"
+Spectrum=rl(merge(r0a+r0b))
+save(Spectrum,'TWSpectrum')
+p2=plot('TWSpectrum',type="bifurcation",
+       bifurcation_x=["Rlam"], bifurcation_y=["Ilam"],
+       xlabel="$\Re(\lambda)$",ylabel="$\Im(\lambda)$") 
+
+wait()
+
+p2.savefig("TWSpectrum.eps")
+
+
+print "\n***Clean the directory***"
+clean()
+print "\nDone."

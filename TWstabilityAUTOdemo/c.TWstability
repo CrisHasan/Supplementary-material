@@ -1,0 +1,10 @@
+unames = {}
+parnames = {1: 'gam', 2: 'sig', 3: 'zeta', 4:'phi',5: 'mu', 6: 'Rlam', 7: 'Ilam', 11: 'Period', 12: 'h', 13: 'L', 16: 'lamp',17:'lampp'}
+NDIM=  6, IPS =   1, IRS =   0, NPAR=40, ICP =  [1]
+NTST=  1, NCOL=   4, IAD =   3, ISP =  2, ISW = 1, IADS= 1, NBC= 0, NINT= 0
+NMX=   1000, NPR=  1000, MXBF=  10, IID =   2
+ ITMX= 10, ITNW= 8, NWTN= 3, JAC= 0
+EPSL=  1e-07, EPSU = 1e-07, EPSS = 1e-05
+DS  =  0.005, DSMIN=  1e-7, DSMAX=  0.01
+THL =  {11: 0.0}
+

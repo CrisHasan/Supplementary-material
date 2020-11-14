@@ -1,0 +1,12 @@
+#======================
+# AUTO demo TWstability
+#======================
+import os
+
+dl('TWEck')
+dl('TWSpectrum')
+
+os.remove("TWEck.eps")
+os.remove("TWSpectrum.eps")
+
+cl()

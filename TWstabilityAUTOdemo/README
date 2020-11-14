@@ -1,0 +1,30 @@
+   Stability of periodic travelling waves
+     in a heteroclinic-cycle model 
+   ======================================
+
+ This demo computes the essential spectrum and stability boundary in
+ parameter space of large-wavelength travelling waves in a cyclic
+ competition model with one spatial dimension. More specifically, the
+ demo produces the data necessary to plot the locus of Eckhaus
+ instability or periodic travelling waves for system (2) with sigma =
+ 3.2 from the paper
+ 
+   "Stability of periodic travelling waves
+    in a heteroclinic-cycle model"
+   by
+   Cris R. Hasan, Hinke M. Osinga, Claire M. Postlethwaite and
+   Alastair M. Rucklidge,
+   arXiv 1911.10447 (revised version from November 2020)
+
+ Details of the computations are described in Section 3 of the paper
+ and the stability boundary is shown in Figure 5.
+
+ To run this demo, type "auto TWstability.auto". The resulting output
+ files b.TWEck and s.TWEck contain the data for the Eckhaus stability
+ curve and the files b.TWSpectrum and s.TWSpectrum contain data for
+ the essential spectrum computed for the case that zeta = 1. The plots
+ for the Eckhaus stability curve and the essential spectrum will also
+ be saved as eps files.
+
+ To restore the demo to its original state, type "auto clean.auto"
+ 
