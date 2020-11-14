@@ -1,6 +1,6 @@
 !--------------------------------------------------------------------- 
 !---------------------------------------------------------------------
-!    Stability of periodic travelling waves
+!    Spatiotemporal stability of periodic travelling waves
 !         in a heteroclinic-cycle model 
 ! --------------------------------------------------------------------
 ! TWstability: Essential spectrum and Eckhaus stability boundary of
