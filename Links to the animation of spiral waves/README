@@ -1,6 +1,9 @@
    Spatiotemporal stability of periodic travelling waves
      in a heteroclinic-cycle model 
-   ======================================
+
+   Ref.: Hasan, Osinga, Postlethwaite and Rucklidge,
+       arXiv 1911.10447 (revised version from November 2020)
+======================================
 
  Nine examples of instabilities observed in PDE simulations of two-dimensional spiral waves
      * Case sigma = 10 and zeta = 0.4
