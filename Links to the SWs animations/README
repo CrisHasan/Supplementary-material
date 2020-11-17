@@ -5,22 +5,10 @@
        arXiv 1911.10447 (revised version from November 2020)
 ======================================
 
- Nine examples of instabilities observed in PDE simulations of two-dimensional spiral waves
-     * Case sigma = 10 and zeta = 0.4
+ Three examples of instabilities observed in PDE simulations of two-dimensional spiral waves
+     * Case sigma = 10 and zeta = 0.4 (unstable)
 http://www1.maths.leeds.ac.uk/~alastair/sigma_10p00_zeta_0p40_2019_02_04_14_31_00_anim.gif
-     * Case sigma = 10 and zeta = 7
+     * Case sigma = 10 and zeta = 7 (stable)
 http://www1.maths.leeds.ac.uk/~alastair/sigma_10p00_zeta_7p00_2019_03_19_11_41_50_anim.gif
-     * Case sigma = 10 and zeta = 7.2
-http://www1.maths.leeds.ac.uk/~alastair/sigma_10p00_zeta_7p20_2019_03_22_08_55_46_anim.gif
-     * Case sigma = 10 and zeta = 7.5
-http://www1.maths.leeds.ac.uk/~alastair/sigma_10p00_zeta_7p50_2019_03_20_16_58_22_anim.gif
-     * Case sigma = 10 and zeta = 8
-http://www1.maths.leeds.ac.uk/~alastair/sigma_10p00_zeta_8p00_2019_03_19_11_45_44_anim.gif
-     * Case sigma = 10 and zeta = 8.5
+     * Case sigma = 10 and zeta = 8.5 (convectively unstable)
 http://www1.maths.leeds.ac.uk/~alastair/sigma_10p00_zeta_8p50_2019_03_21_08_40_59_anim.gif
-     * Case sigma = 10 and zeta = 9
-http://www1.maths.leeds.ac.uk/~alastair/sigma_10p00_zeta_9p00_2019_02_06_14_53_31_anim.gif
-     * Case sigma = 10 and zeta = 9.5
-http://www1.maths.leeds.ac.uk/~alastair/sigma_10p00_zeta_9p50_2019_02_06_14_53_22_anim.gif
-     * Case sigma = 10 and zeta = 10
-http://www1.maths.leeds.ac.uk/~alastair/sigma_10p00_zeta_10p00_2019_02_06_14_53_13_anim.gif
