@@ -6,9 +6,12 @@
 ======================================
 
  Three examples of direct simulations of two-dimensional spiral waves
-     * Case sigma = 10 and zeta = 0.4 (unstable)
-http://www1.maths.leeds.ac.uk/~alastair/sigma_10p00_zeta_0p40_2019_02_04_14_31_00_anim.gif
-     * Case sigma = 10 and zeta = 7 (stable)
-http://www1.maths.leeds.ac.uk/~alastair/sigma_10p00_zeta_7p00_2019_03_19_11_41_50_anim.gif
-     * Case sigma = 10 and zeta = 8.5 (convectively unstable)
-http://www1.maths.leeds.ac.uk/~alastair/sigma_10p00_zeta_8p50_2019_03_21_08_40_59_anim.gif
+ 
+      * Case sigma = 10 and zeta = 0.4 (unstable)
+https://github.com/CrisHasan/Supplementary-material/blob/master/Links%20to%20the%20SWs%20animations/sigma_10p00_zeta_0p40.gif
+      
+      * Case sigma = 10 and zeta = 7 (stable)
+https://github.com/CrisHasan/Supplementary-material/blob/master/Links%20to%20the%20SWs%20animations/sigma_10p00_zeta_7p00.gif
+
+      * Case sigma = 10 and zeta = 8.5 (convectively unstable)
+https://github.com/CrisHasan/Supplementary-material/blob/master/Links%20to%20the%20SWs%20animations/sigma_10p00_zeta_8p50.gif
